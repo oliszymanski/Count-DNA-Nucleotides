@@ -19,18 +19,30 @@ _DBG9_ = True						# Standard debug
 #   FUNCTIONS
 #================================================
 
-def Count(s_file_path : str):
+def convert_elements_to_string(ls):
+
+        ls = [str(element) for element in ls]
+
+        return ls
+
+
+
+def Count(s_file_path):
 
         ls_a = []       # lists for inserting data
         ls_c = []
         ls_g = []
         ls_t = []
 
-        s_file_path = open(s_file_path, 'rb')
-        if (_DBG9_): print('s_file_path', s_file_path, '\n\n')
+        ls_file = open(s_file_path, 'r')       # read the file in binary
+        if (_DBG9_): print('ls_file:', ls_file, '\n')
 
+        ls_file = convert_elements_to_string(ls_file)
 
-        return s_file_path
+        for element in ls_file:
+            if (_DBG9_): print(element)
+
+        return
 
 
 
