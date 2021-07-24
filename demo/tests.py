@@ -27,6 +27,26 @@ def convert_elements_to_string(ls):
 
 
 
+
+def count_percentage(ls_amounts):
+
+    ls_percentages = []
+
+    all_data = sum(ls_amounts)
+
+
+    for element_num in ls_amounts:
+         percentage = element_num/all_data
+         ls_percentages.append(percentage)
+
+
+    if (_DBG9_): print('s', sum(ls_percentages))        # dummy check
+
+    return ls_percentages
+
+
+
+
 def Count(s_file_path):
 
         ls_a = []       # lists for inserting data
@@ -59,6 +79,11 @@ def Count(s_file_path):
         c = len(ls_c)
         g = len(ls_g)
         t = len(ls_t)
+
+        ls_percentage = [a, c, g, t]
+
+        per = count_percentage(ls_percentage)
+        if(_DBG9_): print('per', per)
 
         return a, c, g, t
 
