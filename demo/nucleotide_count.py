@@ -16,11 +16,13 @@ class CountNucleotides:
 
 
 
+
     def convert_elements_to_string(self, ls):
 
         ls = [str(element) for element in ls]
 
         return ls
+
 
 
 
@@ -32,11 +34,14 @@ class CountNucleotides:
 
 
         for element_num in ls_amounts:
-            percentage = element_num/all_data
+            percentage = ( element_num / all_data )
+
+            percentage = int( ( percentage * 100 ) )       # rounding up the data ( to 1/100 place )
+            ls_percentages.append(percentage)
 
 
+        return ls_percentages
 
-        return
 
 
 
@@ -47,7 +52,7 @@ class CountNucleotides:
         ls_g_amount = []
         ls_t_amount = []
 
-        ls_amount_amount = []
+        ls_data_amount = []
 
 
 
@@ -68,16 +73,15 @@ class CountNucleotides:
                 elif (element == 'T'): ls_t_amount.append(element)     # find thymine
 
 
-        ls_amount_amount.append(len(ls_a_amount))
-        ls_amount_amount.append(len(ls_c_amount))
-        ls_amount_amount.append(len(ls_g_amount))
-        ls_amount_amount.append(len(ls_t_amount))
+        ls_data_amount.append(len(ls_a_amount))
+        ls_data_amount.append(len(ls_c_amount))
+        ls_data_amount.append(len(ls_g_amount))
+        ls_data_amount.append(len(ls_t_amount))
+
+        ls_percentage = self.count_percentage(ls_data_amount)
 
 
-        return
-
-
-
+        return ls_data_amount, ls_percentage
 
 
 
