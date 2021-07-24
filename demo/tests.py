@@ -36,11 +36,13 @@ def count_percentage(ls_amounts):
 
 
     for element_num in ls_amounts:
-         percentage = element_num/all_data
+         percentage = ( element_num / all_data )
+
+         percentage = int( ( percentage * 100 ) )       # rounding up the data ( to 1/100 place )
          ls_percentages.append(percentage)
 
 
-    if (_DBG9_): print('s', sum(ls_percentages))        # dummy check
+    # if (_DBG9_): print('s', sum(ls_percentages))        # dummy check
 
     return ls_percentages
 
