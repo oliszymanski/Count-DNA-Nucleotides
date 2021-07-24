@@ -42,7 +42,25 @@ def Count(s_file_path):
         for element in ls_file:
             if (_DBG9_): print(element)
 
-        return
+
+        for line in ls_file:
+            for element in line:
+
+                if (element == 'A'): ls_a.append(element)       # find adenine
+
+                elif (element == 'C'): ls_c.append(element)     # find cytosine
+
+                elif (element == 'G'): ls_g.append(element)     # find guanine
+
+                elif (element == 'T'): ls_t.append(element)     # find thymine
+
+
+        a = len(ls_a)
+        c = len(ls_c)
+        g = len(ls_g)
+        t = len(ls_t)
+
+        return a, c, g, t
 
 
 
@@ -51,7 +69,11 @@ def Count(s_file_path):
 #================================================
 
 if (__name__ == '__main__'):
-    counted = Count('demo-data/Acetobacter_pasterianus_dna.txt')
+    a, c, g, t = Count('demo-data/Acetobacter_pasterianus_dna.txt')
+    print('counted ls_a', a)
+    print('counted ls_c', c)
+    print('counted ls_g', g)
+    print('counted ls_t', t)
 
 
 
