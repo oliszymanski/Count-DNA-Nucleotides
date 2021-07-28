@@ -17,6 +17,11 @@ class CountNucleotides:
 
 
 
+    def test(self):
+
+        return "Hello there!"
+
+
     def count_percentage(self):
 
 

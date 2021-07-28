@@ -13,7 +13,10 @@ import count_nucleotide as cn
 if (__name__ == '__main__'):
     print("Hello")
 
-    # tests will be here..
+    # testing the class
+    search_nucleotides = cn.CountNucleotides()
+
+    print(search_nucleotides.test())
 
 
 
