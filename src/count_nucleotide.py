@@ -26,7 +26,13 @@ class CountNucleotides:
 
 
     def convert_to_string(self, ls_data):
+        """
+            input:
+                ls_data:    list with data,
 
+            output:
+                ls_data:    list with elements converted to string;
+        """
 
         ls_data = [ str( element ) for element in ls_data ]
 
