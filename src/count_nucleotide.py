@@ -43,15 +43,24 @@ class CountNucleotides:
 
     def count_nucleotides(self, file_path):
 
-        ls_s_a = []
+        """
+            input:
+                file_path:      path of the file,
+
+            output:
+                dict_data:      dictionary of data about nucleotides;
+        """
+
+
+        ls_s_a = []         # lists for nucleotides
         ls_s_c = []
         ls_s_g = []
         ls_s_t = []
 
-        ls_main_data = []
 
-        ls_data_file = open(file_path, 'r')
+        ls_data_file = open(file_path, 'r')                         # opening data fiel
         ls_fixed_file = self.convert_to_string(ls_data_file)        # every element (element is in every line) converted to string
+
 
         for line in ls_fixed_file:
             for element in line:
@@ -66,8 +75,11 @@ class CountNucleotides:
 
 
 
-        dict_data = {"A" : len(ls_s_a)  , "C" : len(ls_s_c) , "G" : len(ls_s_g) , "T" : len(ls_s_t) }          # dictionary of data (symbol of nucleotide is key and value is data)
-
+        dict_data = { "A" : len(ls_s_a),        # dictionary of data (symbol of nucleotide is key and value is data)
+                      "C" : len(ls_s_c),
+                      "G" : len(ls_s_g),
+                      "T" : len(ls_s_t)
+                      }
 
 
         return dict_data
