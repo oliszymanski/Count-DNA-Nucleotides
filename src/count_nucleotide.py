@@ -17,9 +17,12 @@ class CountNucleotides:
 
 
 
+
     def test(self):
 
         return "Hello there!"
+
+
 
 
     def count_percentage(self):
@@ -30,12 +33,14 @@ class CountNucleotides:
 
 
 
+
     def convert_to_string(self, ls_data):
 
 
         ls_data = [ str( element ) for element in ls_data ]
 
         return ls_data
+
 
 
 
