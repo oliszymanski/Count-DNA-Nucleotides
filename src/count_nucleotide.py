@@ -30,6 +30,15 @@ class CountNucleotides:
 
 
 
+    def convert_to_string(self, ls_data):
+
+
+        ls_data = [ str( element ) for element in ls_data ]
+
+        return ls_data
+
+
+
     def count_nucleotides(self, file_path):
 
         ls_s_a = []
@@ -42,16 +51,26 @@ class CountNucleotides:
 
 
 
-        return ls_data
+
+        dict_data = {}          # dictionary of data (symbol of nucleotide is key and value is data)
 
 
 
 
-    def count_percentage(self, ls_amount):
+
+        return dict_data
 
 
 
-        return
+
+    def count_nucleotide_percentage(self, ls_amount):
+
+        # some code
+
+
+        dict_percent_data = {}
+
+        return dict_percent_data
 
 
 
