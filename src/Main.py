@@ -21,9 +21,13 @@ if (__name__ == '__main__'):
     print("Hello")
 
     # testing the class
-    search_nucleotides = cn.CountNucleotides()
+    search_nucleotides = cn.CountNucleotides()          # main object
 
     print(search_nucleotides.test())
+
+
+
+    search_nucleotides.count_nucleotides(s_file_path)
 
 
 
