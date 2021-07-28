@@ -25,15 +25,6 @@ class CountNucleotides:
 
 
 
-    def count_percentage(self):
-
-
-
-        return
-
-
-
-
     def convert_to_string(self, ls_data):
 
 
@@ -68,6 +59,9 @@ class CountNucleotides:
 
                 elif (element == 'T'): ls_s_t.append(element)     # find thymine
 
+
+
+        dict_data = {"A" : len(ls_s_a)  , "C" : len(ls_s_c) , "G" : len(ls_s_g) , "T" : len(ls_s_t) }          # dictionary of data (symbol of nucleotide is key and value is data)
 
 
 
