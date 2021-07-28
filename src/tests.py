@@ -22,9 +22,9 @@ if (__name__ == '__main__'):
 
     search_nucleotides = cn.CountNucleotides()          # create object
 
-    search_nucleotides.count_nucleotides(s_file_path)
+    data_dictionary = search_nucleotides.count_nucleotides(s_file_path)
 
-
+    print("data_dictionary =", data_dictionary)
 
 
 
