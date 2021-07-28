@@ -51,14 +51,22 @@ class CountNucleotides:
         ls_s_g = []
         ls_s_t = []
 
-        ls_data = []
+        ls_main_data = []
+
+        ls_data_file = open(file_path, 'r')
+        ls_fixed_file = self.convert_to_string(ls_data_file)        # every element (element is in every line) converted to string
 
 
+        for line in ls_fixed_file:
+            for element in line:
 
+                if (element == 'A'): ls_s_a.append(element)       # find adenine
 
+                elif (element == 'C'): ls_s_c.append(element)     # find cytosine
 
-        dict_data = {}          # dictionary of data (symbol of nucleotide is key and value is data)
+                elif (element == 'G'): ls_s_g.append(element)     # find guanine
 
+                elif (element == 'T'): ls_s_t.append(element)     # find thymine
 
 
 
