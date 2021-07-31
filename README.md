@@ -1,5 +1,5 @@
-# CountDNANucleobases
-Finds the number of all four nitrogen-containing nucleobases
+# Count-DNA-Nucleotides
+Used for counting the number of all four nucleotides and finding the percentage number of each of them
 
 
 
