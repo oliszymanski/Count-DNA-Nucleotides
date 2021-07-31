@@ -57,6 +57,8 @@ class CountNucleotides:
         ls_s_g = []
         ls_s_t = []
 
+        dict_data = {}      # dictionary for data
+
 
         ls_data_file = open(file_path, 'r')                         # opening data fiel
         ls_fixed_file = self.convert_to_string(ls_data_file)        # every element (element is in every line) converted to string
@@ -75,11 +77,10 @@ class CountNucleotides:
 
 
 
-        dict_data = { "A" : len(ls_s_a),        # dictionary of data (symbol of nucleotide is key and value is data)
-                      "C" : len(ls_s_c),
-                      "G" : len(ls_s_g),
-                      "T" : len(ls_s_t)
-                      }
+        dict_data["A"] = len(ls_s_a)
+        dict_data["C"] = len(ls_s_c)
+        dict_data["G"] = len(ls_s_g)
+        dict_data["T"] = len(ls_s_t)
 
 
         return dict_data
