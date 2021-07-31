@@ -102,7 +102,10 @@ class CountNucleotides:
         ls_s_g = []
         ls_s_t = []
 
-        dict_percent_data = {}      # dictionary for nucleotide percentage data
+        ls_all_data = []
+        ls_nucleotide_percentage = []
+
+        dict_nucleotide_percentage = {}      # dictionary for nucleotide percentage data
 
 
         ls_data_file = open(file_path, 'r')
@@ -121,9 +124,28 @@ class CountNucleotides:
 
 
 
+        ls_all_data.append(len(ls_s_a))
+        ls_all_data.append(len(ls_s_c))
+        ls_all_data.append(len(ls_s_g))
+        ls_all_data.append(len(ls_s_t))
+
+        all_data = sum(ls_all_data)         # number of all nucleotides
 
 
-        return dict_percent_data
+
+        for value in ls_all_data:
+            percent_value = ( value / all_data ) * 100      # counting percentage of every nucleotide
+            ls_nucleotide_percentage.append( percent_value )
+
+
+
+        dict_nucleotide_percentage["A"] = ls_nucleotide_percentage[0]
+        dict_nucleotide_percentage["C"] = ls_nucleotide_percentage[1]
+        dict_nucleotide_percentage["G"] = ls_nucleotide_percentage[2]
+        dict_nucleotide_percentage["T"] = ls_nucleotide_percentage[3]
+
+
+        return dict_nucleotide_percentage
 
 
 
