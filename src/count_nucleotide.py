@@ -61,10 +61,10 @@ class CountNucleotides:
 
 
         ls_data_file = open(file_path, 'r')                         # opening data fiel
-        ls_fixed_file = self.convert_to_string(ls_data_file)        # every element (element is in every line) converted to string
+        ls_fixed_data = self.convert_to_string(ls_data_file)        # every element (element is in every line) converted to string
 
 
-        for line in ls_fixed_file:
+        for line in ls_fixed_data:
             for element in line:
 
                 if (element == 'A'): ls_s_a.append(element)       # find adenine
