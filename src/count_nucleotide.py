@@ -88,12 +88,40 @@ class CountNucleotides:
 
 
 
-    def count_nucleotide_percentage(self, ls_amount):
+    def count_nucleotide_percentage(self, file_path):
+        '''
+            input:
+                file_path:      path of the file with data,
 
-        # some code
+            output:
+                dict_percent_data:  dictionary with percentage data
+        '''
+
+        ls_s_a = []         # lists for nucleotides
+        ls_s_c = []
+        ls_s_g = []
+        ls_s_t = []
+
+        dict_percent_data = {}      # dictionary for nucleotide percentage data
 
 
-        dict_percent_data = {}
+        ls_data_file = open(file_path, 'r')
+        ls_fixed_data = self.convert_to_string(ls_data_file)
+
+        for line in ls_fixed_data:
+            for element in line:
+
+                if (element == 'A'): ls_s_a.append(element)       # find adenine
+
+                elif (element == 'C'): ls_s_c.append(element)     # find cytosine
+
+                elif (element == 'G'): ls_s_g.append(element)     # find guanine
+
+                elif (element == 'T'): ls_s_t.append(element)     # find thymine
+
+
+
+
 
         return dict_percent_data
 
