@@ -67,13 +67,13 @@ class CountNucleotides:
         for line in ls_fixed_data:
             for element in line:
 
-                if (element == 'A'): ls_s_a.append(element)       # find adenine
+                if (element == 'A' or element == 'a'): ls_s_a.append(element)       # find adenine
 
-                elif (element == 'C'): ls_s_c.append(element)     # find cytosine
+                elif (element == 'C' or element == 'c'): ls_s_c.append(element)     # find cytosine
 
-                elif (element == 'G'): ls_s_g.append(element)     # find guanine
+                elif (element == 'G' or element == 'g'): ls_s_g.append(element)     # find guanine
 
-                elif (element == 'T'): ls_s_t.append(element)     # find thymine
+                elif (element == 'T' or element == 't'): ls_s_t.append(element)     # find thymine
 
 
 
@@ -114,13 +114,13 @@ class CountNucleotides:
         for line in ls_fixed_data:
             for element in line:
 
-                if (element == 'A'): ls_s_a.append(element)       # find adenine
+                if (element == 'A' or element == 'a'): ls_s_a.append(element)       # find adenine
 
-                elif (element == 'C'): ls_s_c.append(element)     # find cytosine
+                elif (element == 'C' or element == 'c'): ls_s_c.append(element)     # find cytosine
 
-                elif (element == 'G'): ls_s_g.append(element)     # find guanine
+                elif (element == 'G' or element == 'g'): ls_s_g.append(element)     # find guanine
 
-                elif (element == 'T'): ls_s_t.append(element)     # find thymine
+                elif (element == 'T' or element == 't'): ls_s_t.append(element)     # find thymine
 
 
 
