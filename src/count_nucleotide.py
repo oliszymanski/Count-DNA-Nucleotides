@@ -134,7 +134,7 @@ class CountNucleotides:
 
 
         for value in ls_all_data:
-            percent_value = int( (  value / all_data ) * 100  )      # counting percentage of every nucleotide
+            percent_value = round( (  value / all_data ) * 100, 3  )      # counting percentage of every nucleotide
             ls_nucleotide_percentage.append( percent_value )
 
 
