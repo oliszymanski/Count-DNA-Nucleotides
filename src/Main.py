@@ -12,6 +12,7 @@ import count_nucleotide as cn
 
 s_file_path = "src-data/Acetobacter_pasterianus_dna.txt"
 s_second_file_path = "src-data/Escherichia_phage.txt"
+s_third_file_path = "src-data/sars-cov-2.txt"
 
 
 #================================================
@@ -45,6 +46,21 @@ if (__name__ == '__main__'):
 
     second_nucleotide_percentage = search_nucleotides.count_nucleotide_percentage(s_second_file_path)
     print("second_nucleotides_number =", second_nucleotide_percentage, "\n\n\n\n")
+
+
+
+
+
+    third_nucleotide_number = search_nucleotides.count_nucleotides(s_third_file_path)
+    print("third_nucleotide_number =", third_nucleotide_number, "\n\n")
+
+
+    third_nucleotide_percentage = search_nucleotides.count_nucleotide_percentage(s_third_file_path)
+    print("third_nucleotide_percentage =", third_nucleotide_percentage, '\n\n\n\n')
+
+
+
+
 
 #================================================
 #   END OF FILE
