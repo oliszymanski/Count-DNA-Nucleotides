@@ -41,6 +41,45 @@ class CountNucleotides:
 
 
 
+    def get_ls_nucleotides(self, file_path):
+
+        ls_s_a = []         # lists for nucleotides
+        ls_s_c = []
+        ls_s_g = []
+        ls_s_t = []
+
+        ls_all_data = []
+        ls_nucleotide_percentage = []
+
+        dict_nucleotide_percentage = {}      # dictionary for nucleotide percentage data
+
+
+        ls_data_file = open(file_path, 'r')
+        ls_fixed_data = self.convert_to_string(ls_data_file)
+
+        for line in ls_fixed_data:
+            for element in line:
+
+                if (element == 'A' or element == 'a'): ls_s_a.append(element)       # find adenine
+
+                elif (element == 'C' or element == 'c'): ls_s_c.append(element)     # find cytosine
+
+                elif (element == 'G' or element == 'g'): ls_s_g.append(element)     # find guanine
+
+                elif (element == 'T' or element == 't'): ls_s_t.append(element)     # find thymine
+
+
+
+        ls_all_data.append(len(ls_s_a))
+        ls_all_data.append(len(ls_s_c))
+        ls_all_data.append(len(ls_s_g))
+        ls_all_data.append(len(ls_s_t))
+
+        return ls_all_data
+
+
+
+
     def count_nucleotides(self, file_path):
 
         """
