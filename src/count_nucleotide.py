@@ -2,6 +2,8 @@
 #   IMPORTS
 #================================================
 
+from pandas import DataFrame
+import matplotlib.pyplot as plt
 
 
 #================================================
@@ -185,6 +187,21 @@ class CountNucleotides:
 
 
         return dict_nucleotide_percentage
+
+
+
+
+    def display_nucleotide_chart(self, dict_data):
+
+        ls_nucleotides = ['A', 'C', 'G', 'T']       #
+
+        df = DataFrame(dict_data, index=ls_nucleotides)
+
+
+        df.plot.pie(y= 'nucleotide number', figsize=(4, 4), startangle=90)
+        plt.show()      # displaying  pie chart
+
+        return
 
 
 
