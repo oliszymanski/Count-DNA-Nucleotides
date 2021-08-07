@@ -43,17 +43,16 @@ class CountNucleotides:
 
 
 
-    def get_ls_nucleotides(self, file_path):
+    def get_nucleo_dict(self, file_path):
 
         ls_s_a = []         # lists for nucleotides
         ls_s_c = []
         ls_s_g = []
         ls_s_t = []
 
-        ls_all_data = []
-        ls_nucleotide_percentage = []
+        ls_all_data = []          # list for all data
 
-        dict_nucleotide_percentage = {}      # dictionary for nucleotide percentage data
+        dict_nucleotide = {}      # main dictionary for nucleotide number list
 
 
         ls_data_file = open(file_path, 'r')
@@ -77,7 +76,10 @@ class CountNucleotides:
         ls_all_data.append(len(ls_s_g))
         ls_all_data.append(len(ls_s_t))
 
-        return ls_all_data
+
+        dict_nucleotide["nucleotides"] = ls_all_data
+
+        return dict_nucleotide
 
 
 
@@ -193,12 +195,15 @@ class CountNucleotides:
 
     def display_nucleotide_chart(self, dict_data):
 
-        ls_nucleotides = ['A', 'C', 'G', 'T']       #
+        ls_nucleotides = ['A', 'C', 'G', 'T']
+
+
+
 
         df = DataFrame(dict_data, index=ls_nucleotides)
 
 
-        df.plot.pie(y= 'nucleotide number', figsize=(5, 5), startangle=90)
+        df.plot.pie(y='nucleotides', figsize=(5, 5), startangle=90)
         plt.show()      # displaying  pie chart
 
         return
