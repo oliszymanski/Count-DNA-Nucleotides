@@ -199,12 +199,10 @@ class CountNucleotides:
 
 
 
-
         df = DataFrame(dict_data, index=ls_nucleotides)
 
 
-        df.plot.pie(y='nucleotides', figsize=(5, 5), startangle=90)
-        plt.show()      # displaying  pie chart
+        df.plot.pie( y='nucleotides', figsize=(5, 5), startangle=90 )
 
         return
 
