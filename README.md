@@ -110,7 +110,7 @@ Key is the protein name, key is the amount of these proteins in a list:
     dict_data[ "nucleotides" ] = ls_all_protein
 ```
 
-
+<br>
 Pie charts displayed below:
 
 <img src="screenshots/00_nucleotide_data_figure.png" width="400px" height="275">
