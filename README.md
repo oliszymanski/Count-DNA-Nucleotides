@@ -99,5 +99,23 @@ function.
 
 <br>
 
+### display_nucleotide_chart()
+
+This function does what it says it does. function takes a dict type argument `dict_data` which is a dictionary with
+one key and value. 
+
+Key is the protein name, key is the amount of these proteins in a list:
+
+```python
+    dict_data[ "nucleotides" ] = ls_all_protein
+```
+
+
+Pie charts displayed below:
+
+<img src="screenshots/00_nucleotide_data_figure.png" width="300px" height="250">
+
+<br>
+
 ### Note
 I will be adding more features in the future
