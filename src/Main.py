@@ -62,7 +62,6 @@ if (__name__ == '__main__'):
 
 
 
-
     # testing the display chart
     dict_nucleotide_number = search_nucleotides.get_nucleo_dict(s_third_file_path)
     print("dict_nucleotide_number =", dict_nucleotide_number, '\n')
