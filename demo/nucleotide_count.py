@@ -100,7 +100,7 @@ class CountNucleotides:
         ls_second = []
 
         for val in ls_meta:
-            if ( ls_meta[ ls_meta[val] : len(sequence) ] == sequence  ):        # checking if metadata contains the sequence (going from i-th element to )
+            if (  ls_meta[ ls_meta[val] : len(sequence) ] == sequence  ):        # checking if metadata contains the sequence (going from i-th element to )
                 ls_second.append(True)
 
             else:
